@@ -1,6 +1,6 @@
 -- @Date:   2017-06-11T13:20:38+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-11T13:33:57+02:00
+-- @Last modified time: 2017-06-11T17:56:41+02:00
 -- @License: GNU General Public License v3.0
 
 function callbackExemple(data)
@@ -9,6 +9,25 @@ function callbackExemple(data)
     SetNotificationTextEntry('STRING')
     AddTextComponentString("Callback Exemple")
     DrawNotification(false, false)
+
+  end)
+end
+
+function freezeMenu(data)
+  Citizen.CreateThread(function()
+
+    SetNotificationTextEntry('STRING')
+    AddTextComponentString("Freeze Menu")
+    DrawNotification(false, false)
+
+    exports.ft_menuBuilder:Freeze(true)
+    Citizen.Wait(1000)
+
+    SetNotificationTextEntry('STRING')
+    AddTextComponentString("UnFreeze Menu")
+    DrawNotification(false, false)
+
+    exports.ft_menuBuilder:Freeze(false)
 
   end)
 end
@@ -30,7 +49,7 @@ function dynamicMenu(data)
 
     local settings = {
       title = "Dynamic menu",
-      menuTitle = "Random menu ",
+      menuTitle = "Random menu",
     }
 
     local buttons = {}
