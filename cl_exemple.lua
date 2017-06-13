@@ -1,6 +1,6 @@
 -- @Date:   2017-06-11T13:20:38+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-11T17:56:41+02:00
+-- @Last modified time: 2017-06-13T11:22:35+02:00
 -- @License: GNU General Public License v3.0
 
 function callbackExemple(data)
@@ -58,8 +58,8 @@ function dynamicMenu(data)
       table.insert(buttons, { text = "Button", subText = i } )
     end
 
-    exports.ft_menuBuilder:Add("ft_menuExemple:dynamicMenu", buttons, settings)
-    exports.ft_menuBuilder:Next("ft_menuExemple:dynamicMenu")
+    exports.ft_menuBuilder:Add("ft_dynamicMenu", buttons, settings)
+    exports.ft_menuBuilder:Next("ft_dynamicMenu")
 
   end)
 end

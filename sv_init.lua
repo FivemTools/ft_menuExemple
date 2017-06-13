@@ -1,6 +1,6 @@
 -- @Date:   2017-06-11T12:18:01+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-11T18:22:46+02:00
+-- @Last modified time: 2017-06-13T11:22:56+02:00
 -- @License: GNU General Public License v3.0
 
 function wait(seconds)
@@ -24,6 +24,6 @@ AddEventHandler('ft_menuExemple:SvFreeze', function()
   wait(1)
 
   print("[ft_menuExemple] UnFreezeMenu")
-  TriggerClientEvent("ft_menuBuilder:Freeze", source, false)
+  TriggerClientEvent("ft_menuBuilder:ClFreeze", source, false)
 
 end)
