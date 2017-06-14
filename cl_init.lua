@@ -1,6 +1,6 @@
 -- @Date:   2017-06-11T11:53:02+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-11T16:48:14+02:00
+-- @Last modified time: 2017-06-14T21:33:53+02:00
 -- @License: GNU General Public License v3.0
 
 local FirstJoinProper = false
@@ -14,7 +14,7 @@ Citizen.CreateThread(function()
 
       if not FirstJoinProper then
           -- Send menu to Menu Generator
-        exports.ft_menuBuilder:MenuGenerator(menu)
+        exports.ft_menuBuilder:Generator(menu)
       end
 
       -- Press F1
